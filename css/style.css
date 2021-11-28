@@ -1,0 +1,289 @@
+/* VARIÁVEIS */
+:root {
+   /* CORES */
+  --vermelho: #e50914;
+  --preto: #141414;
+  /* FONTS */
+    --font-family-sans: 'Open Sans', sans-serif;
+ }
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+
+body {
+    position: relative;
+    background: var(--preto);
+    font-family: var(--font-family-sans);
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+header .logo {
+     color: var(--vermelho);
+     font-family: 'Roboto', sans-serif;
+     font-weight: 700;
+     font-size: 2.5rem;
+     margin-left: 0.5rem;
+}
+
+header nav a {
+    position: relative;
+    color: #aaa;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: all 0.3s;
+}
+
+header nav a:hover {
+    color: #fff; 
+    cursor: pointer;
+}
+
+/* MAIN MOVIE */
+
+.main-movie {
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) 100%),   url('https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.jpg');
+    background-position: center;
+    background-size: cover;
+    font-size: 1rem;
+    color: #FFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    height: 22rem;
+    padding: 0 1rem;
+}
+
+.main-movie .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2rem;
+    width: 60%;
+    height: 100%;
+}
+
+.buttons {
+    display: block;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 3rem;
+}
+
+.buttons .button {
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 1rem 1em;
+    border-radius: 0.5rem;
+    border: rgba(255,255,255,.5) solid 1px;
+    margin-right: 0.5rem;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.buttons .button i {
+    margin-right: 0.5rem;
+}
+
+.buttons .button:hover {
+    background: #fff;
+    color: #000;
+    border: rgba(0,0,0,.5) solid 1px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.box-image-carousel {
+    display: block;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    height: 16.5rem;
+    margin-top: 2rem;
+}
+
+.box-image-carousel:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border: rgba(255,255,255,1) solid 2px;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+/* TOGGLE MENU */
+/* ----------------- Imported Poppins font from Google font ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700;800;900&display=swap');
+
+/* ------------- Container styling ---------------- */
+.toggle-container
+{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 60%;
+  display: none;
+  position: absolute;
+  top: 0;
+  margin-bottom: 2rem;
+}
+
+/* -------------- Burgur styling ----------------- */
+.btn
+{
+  top: 0;
+  right: 0;
+  height: 4.5rem;
+  width: 4.5rem;
+  padding: 1rem;
+  background: var(--vermelho);
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.btn .bar1, .btn .bar2, .btn .bar3
+{
+  height: 0.25rem;
+  width: 100%;
+  display: block;
+  background: #fff;
+}
+
+.btn .bar1, .btn .bar2, .btn .bar3:hover{
+    background: #fff;
+}
+
+/* ----------- close btn ------------- */
+.close-btn
+{
+  top: 0;
+  right: 0;
+  height: 4.5rem;
+  width: 4.5rem;
+  padding: 1.5rem;
+  background: var(--vermelho);
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+
+.close-btn .bar1
+{
+  transform: rotate(-130deg);
+  height: 0.25rem;
+  width: 90%;
+  display: block;
+  background: #fff;
+  position: absolute;
+}
+
+
+
+.close-btn .bar2
+{
+  display: none;
+}
+
+.close-btn .bar3
+{
+  transform: rotateZ(130deg);
+  height: 0.25rem;
+  width: 90%;
+  display: block;
+  background: #fff;
+  position: absolute;
+}
+
+.close-btn .bar1 .bar3:hover
+{
+  background: #fff;
+}
+
+/* ------------- Hide menu ----------- */
+.menu
+{
+  display: none;
+}
+
+/* ------------------- Menu styling --------------- */
+.open-menu
+{
+  width: 100%;
+  height: 115%;
+  background: var(--vermelho);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s all;
+}
+
+.open-menu ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.open-menu ul li
+{
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.open-menu ul li a
+{
+  text-decoration: none;
+  text-styling: none;
+  font-size: 5vw;
+  font-weight: 800;
+  color: #aaa;
+}
+
+.open-menu ul li a:hover{
+    color: #fff;
+}
+
+.open-menu ul li a:hover
+{
+  border-bottom: 5px solid #aaa;
+  transition: 0.2s all;
+}
+
